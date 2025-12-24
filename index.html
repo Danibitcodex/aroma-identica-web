@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Aroma a Medida | Lujo en cada gota</title>
+  <meta name="description" content="Aroma a Medida — fragancias personalizadas y productos de alta calidad.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#">Aroma a Medida</a>
+      <button id="nav-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
+      <nav id="main-nav" class="nav">
+        <ul>
+          <li><a href="#about">Nosotros</a></li>
+          <li><a href="#products">Productos</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" role="banner">
+      <div class="container">
+        <h1>Aroma a Medida</h1>
+        <p>Lujo en cada gota — fragancias personalizadas y productos premium.</p>
+        <a class="btn" href="#contact">Solicitar una muestra</a>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h2>Sobre nosotros</h2>
+      <p>Crear fragancias únicas y memorables es nuestra pasión. Trabajamos con ingredientes de alta calidad y procesos artesanales para ofrecerte aromas que conecten con tus emociones.</p>
+    </section>
+
+    <section id="products" class="container products">
+      <h2>Productos destacados</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Perfume Signature</h3>
+          <p>Notas cálidas y elegantes para un día inolvidable.</p>
+        </article>
+        <article class="card">
+          <h3>Aceite Concentrado</h3>
+          <p>Alta duración en fragancia y pureza máxima.</p>
+        </article>
+        <article class="card">
+          <h3>Muestras Personalizadas</h3>
+          <p>Pide una muestra y descubre tu aroma ideal.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Contacto</h2>
+      <form id="contact-form">
+        <label for="name">Nombre</label>
+        <input id="name" name="name" type="text" required>
+
+        <label for="email">Correo</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="message">Mensaje</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+      <p class="muted">O envíanos un correo a <a href="mailto:info@aroma-medida.example">info@aroma-medida.example</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2025 Aroma a Medida — Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
