@@ -3,80 +3,102 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Aroma a Medida | Lujo en cada gota</title>
-  <meta name="description" content="Aroma a Medida — fragancias personalizadas y productos de alta calidad.">
+  <title>Aroma Identica — Edición Premium</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a class="logo" href="#">Aroma a Medida</a>
-      <button id="nav-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
-      <nav id="main-nav" class="nav">
-        <ul>
-          <li><a href="#about">Nosotros</a></li>
-          <li><a href="#products">Productos</a></li>
-          <li><a href="#contact">Contacto</a></li>
-        </ul>
+  <main class="site">
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo">AI</div>
+        <h1>Aroma Identica</h1>
+      </div>
+      <nav class="actions">
+        <button id="shareBtn" class="btn ghost" aria-label="Compartir">Compartir</button>
+        <button id="copyBtn" class="btn ghost" aria-label="Copiar">Copiar</button>
       </nav>
+    </header>
+
+    <section class="hero" role="region" aria-label="Hero cinematográfico">
+      <div class="hero-left">
+        <div class="cinematic">
+          <div class="tagline" id="tagline">Un aroma que cuenta tu historia</div>
+          <div class="badge" id="bestseller">Más vendido</div>
+        </div>
+
+        <div class="product-panel">
+          <label class="sr-only" for="perfumeName">Nombre del perfume</label>
+          <input id="perfumeName" class="name-input" type="text" placeholder="Escribe el nombre de tu perfume..." value="Luz de Medianoche">
+
+          <div class="preview">
+            <div class="label-wrap">
+              <div class="preview-label" id="previewLabel">Luz de Medianoche</div>
+            </div>
+            <div class="dynamic-taglines" id="dynamicTaglines">Notas: bergamota, ámbar, vetiver</div>
+          </div>
+
+          <div class="gama-row">
+            <div class="gama-options">
+              <label class="gama">
+                <input type="radio" name="gama" value="estandar" checked>
+                <span>Estándar</span>
+              </label>
+              <label class="gama">
+                <input type="radio" name="gama" value="alta">
+                <span>Gama Alta</span>
+                <button class="info" id="gamaInfo" aria-label="Información Gama Alta">i</button>
+              </label>
+            </div>
+
+            <div class="price">
+              <span class="currency">USD</span>
+              <span id="priceValue" class="price-value">49.99</span>
+            </div>
+          </div>
+
+          <div class="controls">
+            <button id="buyBtn" class="btn primary">Comprar</button>
+            <button id="previewShare" class="btn subtle">Vista previa</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="bottle-wrap" aria-hidden="true">
+          <!-- Inline SVG perfume bottle -->
+          <svg id="bottle" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg" class="bottle-svg">
+            <defs>
+              <linearGradient id="goldGrad" x1="0" x2="1">
+                <stop offset="0%" stop-color="#f6e8c3"/>
+                <stop offset="100%" stop-color="#b7862d"/>
+              </linearGradient>
+              <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="6" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <g class="bottle-group" filter="url(#softGlow)">
+              <rect x="40" y="40" rx="22" ry="22" width="120" height="180" fill="url(#goldGrad)" stroke="#cfa55a" stroke-width="2"/>
+              <rect x="72" y="10" rx="10" ry="10" width="56" height="40" fill="#222" opacity="0.12"/>
+              <circle cx="100" cy="120" r="36" fill="#fff" opacity="0.06" />
+              <path d="M60 220c0 8 16 12 40 12s40-4 40-12" fill="#000" opacity="0.06"/>
+              <g class="label-svg">
+                <rect x="58" y="100" rx="10" width="84" height="40" fill="#000" opacity="0.06"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <div id="gamaTooltip" class="tooltip" role="tooltip" hidden>
+      Gama Alta: concentración ampliada, vaporización refinada y estuche premium. Aumenta la duración y la intensidad del aroma.
     </div>
-  </header>
 
-  <main>
-    <section class="hero" role="banner">
-      <div class="container">
-        <h1>Aroma a Medida</h1>
-        <p>Lujo en cada gota — fragancias personalizadas y productos premium.</p>
-        <a class="btn" href="#contact">Solicitar una muestra</a>
-      </div>
-    </section>
-
-    <section id="about" class="container about">
-      <h2>Sobre nosotros</h2>
-      <p>Crear fragancias únicas y memorables es nuestra pasión. Trabajamos con ingredientes de alta calidad y procesos artesanales para ofrecerte aromas que conecten con tus emociones.</p>
-    </section>
-
-    <section id="products" class="container products">
-      <h2>Productos destacados</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Perfume Signature</h3>
-          <p>Notas cálidas y elegantes para un día inolvidable.</p>
-        </article>
-        <article class="card">
-          <h3>Aceite Concentrado</h3>
-          <p>Alta duración en fragancia y pureza máxima.</p>
-        </article>
-        <article class="card">
-          <h3>Muestras Personalizadas</h3>
-          <p>Pide una muestra y descubre tu aroma ideal.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact" class="container contact">
-      <h2>Contacto</h2>
-      <form id="contact-form">
-        <label for="name">Nombre</label>
-        <input id="name" name="name" type="text" required>
-
-        <label for="email">Correo</label>
-        <input id="email" name="email" type="email" required>
-
-        <label for="message">Mensaje</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit" class="btn">Enviar</button>
-      </form>
-      <p class="muted">O envíanos un correo a <a href="mailto:info@aroma-medida.example">info@aroma-medida.example</a></p>
-    </section>
+    <footer class="site-footer">
+      <small>© Aroma Identica — Diseño premium oscuro | Danibitcodex</small>
+    </footer>
   </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <small>© 2025 Aroma a Medida — Todos los derechos reservados.</small>
-    </div>
-  </footer>
 
   <script src="js/main.js" defer></script>
 </body>
